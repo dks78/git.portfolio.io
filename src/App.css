@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+
 @font-face {
   font-family: Centra;
   src: url('./assets/font/CentraNo2-Bold.ttf');
@@ -20,12 +24,15 @@
   box-sizing: border-box;
 }
 body{ 
-  font-weight: 900 ;
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 900;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
+  background-image: url('./assets/img/banner-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff !important;
-  font-family: 'Centra',sans-serif !important;
+ 
 }
 
 
@@ -226,4 +233,202 @@ h1 , h2 , h3 , h4 , h5 , h6  {
   margin: 0;
   padding: 0;
   line-height: normal;
+}
+
+
+/************ Banner Css ************/
+.banner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner .tagline {
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+.banner p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+.banner button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.banner button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.banner button:hover svg {
+  margin-left: 25px;
+}
+.banner #imageHeader {
+  animation: updown 3s linear infinite;
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+  
+}
+h1 > .wrap { 
+  font-size: 25px;
+}
+
+
+
+.skill {
+  position: relative;
+}
+.skill-bx {
+  border-radius: 64px;
+  text-align: center;
+  padding: 40px 50px;
+  margin-top: -60px;
+}
+.skill h2 {
+  margin-top: 150px;
+	font-size: 40px;
+	font-weight: 700;
+
+}
+.skill p {
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+    font-weight: 900;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.skill-slider .item img {
+  width: 40%;
+  margin: 0 auto 15px auto;
+}
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+.TexteCarrousel {
+  padding-bottom: 120px !important;
+  font-weight: 900 ;
+}
+.TexteCarrousel > h3{
+  padding-bottom: 30px !important;
+  font-weight: 900 ;
+}
+
+/* Conteneur parent centré avec positionnement relatif */
+
+/* Conteneur parent utilisant flexbox pour centrer son contenu */
+.flex-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;     /* Centre verticalement */
+  margin-top: -7%;
+}
+
+/* Styles pour l'icône de la souris */
+.mouse-icon {
+  border: 2px solid #120101;
+  border-radius: 0px 0px 50px 50px;
+  height: 50px;
+  width: 30px;
+  margin-left: 50px; /* Cette marge peut être ajustée ou supprimée selon le besoin */
+  display: block;
+  z-index: 10;
+  opacity: 0.4;
+  background-color: rgb(31, 121, 255);
+  margin-top: 0 !important;
+  margin-left: 450px;
+  animation: backgroundColorChange 3s infinite; 
+  
+
+}
+
+/* Styles pour la roue de l'icône de la souris */
+.mouse-icon .wheel {
+  position: relative;
+  border-radius: 10px;
+  background: #fff;
+  width: 4px;
+  height: 10px;
+  top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: moveUpDown 1s ease-in-out infinite alternate;
+
+
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px); /* Déplace vers le bas */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes backgroundColorChange {
+  0% {
+    background-color: rgb(31, 121, 255); /* Couleur initiale */
+  }
+  25% {
+    background-color: rgb(255, 123, 123); /* Couleur intermédiaire */
+  }
+  50% {
+    background-color: rgb(123, 255, 123); /* Couleur intermédiaire */
+  }
+  75% {
+    background-color: rgb(123, 123, 255); /* Couleur intermédiaire */
+  }
+  100% {
+    background-color: rgb(31, 121, 255); /* Couleur finale (reviens à la couleur initiale) */
+  }
 }

@@ -49,6 +49,7 @@ export const NavBar = () => {
                                 <a href="#"><img src={NavIcon3} alt="" /></a>
                             </div>
                                 <button className="vvd"><span>Let’s Connect</span></button>
+                                
                         </span>
                     </Navbar.Collapse>
                 </Container>
