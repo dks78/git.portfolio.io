@@ -310,31 +310,32 @@ h1 , h2 , h3 , h4 , h5 , h6  {
 h1 > .wrap { 
   font-size: 25px;
 }
-
-
+/*                                                        SKILLLL                                                         */
 
 .skill {
+  padding: 0 0 50px 0;
   position: relative;
+  margin-top: 150px;
 }
 .skill-bx {
+  background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 40px 50px;
+  padding: 60px 50px;
   margin-top: -60px;
-}
-.skill h2 {
-  margin-top: 150px;
-	font-size: 40px;
-	font-weight: 700;
+  transition: opacity 0.6s ease-in-out;
 
 }
+.skill h2 {
+	font-size: 45px;
+	font-weight: 700;
+}
 .skill p {
-    color: #ffffff;
-    font-size: 24px;
+    color: #B8B8B8;
+    font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin: 14px 0 75px 0;
-    font-weight: 900;
 }
 .skill-slider {
   width: 80%;
@@ -342,7 +343,7 @@ h1 > .wrap {
   position: relative;
 }
 .skill-slider .item img {
-  width: 40%;
+  width: 50%;
   margin: 0 auto 15px auto;
 }
 .background-image-left {
@@ -352,24 +353,84 @@ h1 > .wrap {
   width: 40%;
   z-index: -4;
 }
-.TexteCarrousel {
-  padding-bottom: 120px !important;
-  font-weight: 900 ;
+
+.skill-bx .progress {
+  height: 20px;
+  background-color: #f3f3f3; 
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin-top: 20px;
 }
-.TexteCarrousel > h3{
-  padding-bottom: 30px !important;
-  font-weight: 900 ;
+.skill-bx .progress-bar {
+  background-color: #ffff1b; 
+  border-radius: 10px; 
+  transition: width 0.6s ease; 
+  font-weight: 900; 
+  color: #000000;
+  font-family: 'Poppins', sans-serif !important;
+}
+:root {
+  --html-css-color: #ff5722; /* HTML/CSS color */
+  --python-color: #4caf50; /* Python color */
+  --react-color: #61dafb; /* React color */
+  --js-color: #f7df1e; /* JavaScript color */
 }
 
-/* Conteneur parent centré avec positionnement relatif */
+.progressBarHtml .progress-bar {
+  background-color: var(--html-css-color);
+}
 
-/* Conteneur parent utilisant flexbox pour centrer son contenu */
+.progressBarPyton .progress-bar {
+  background-color: var(--python-color);
+}
+
+.progressBarReact .progress-bar {
+  background-color: var(--react-color);
+}
+
+.progressBarJs .progress-bar {
+  background-color: var(--js-color);
+}
+
+
+button{
+  background: none;
+  border: none;
+  cursor: pointer;           /* Curseur de pointeur */
+ }
 .flex-container {
   display: flex;
   justify-content: center; /* Centre horizontalement */
   align-items: center;     /* Centre verticalement */
   margin-top: -7%;
+  color: #0000FF !important;
+  transition: width 0.6s ease;
+
 }
+.skill-bx.animate {
+  opacity: 1;
+}
+
+.progress-bar {
+  width: 0; /* Initialement à 0 pour l'animation */
+  transition: width 0.6s ease;
+}
+
+.progress-bar.animate {
+  width: 100%; /* Assurez-vous que la largeur est animée */
+}
+.scroll-animateImage1 {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Transition pour l'opacité et la transformation */
+  transform: translateY(40px); /* Déplacement initial vers le bas */
+}
+
+.scroll-animateImage1.visible {
+  opacity: 1;
+  transform: translateY(0); /* Remettre à la position d'origine */
+}
+
 
 /* Styles pour l'icône de la souris */
 .mouse-icon {
