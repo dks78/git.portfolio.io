@@ -1,4 +1,4 @@
-import React, { useEffect , useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import js from "../assets/img/java-script.png";
 import htmlcss from "../assets/img/html-five.svg";
@@ -76,23 +76,24 @@ export const Skills = () => {
     };
 
     return (
+
         <section className="skill " id="skills" ref={ref}>
-            <div className="container scroll-animateImage1">
+            <div className="container scroll-animateImage1" >
                 <div className="row">
                     <div className="col-12">
                         <div className="skill-bx">
                             <h2>Skills</h2>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br /> Lorem Ipsum has been the industry's standard dummy text.</p>
                             <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                                <div className="item  scroll-animateImage1 ">
-                                    <img src={htmlcss} alt="HTML/CSS"  />
+                                <div className="item   ">
+                                    <img src={htmlcss} alt="HTML/CSS" />
                                     <ProgressBar
                                         className="progressBarHtml "
                                         now={70}
                                         label={`HTML/CSS ${70}%`}
                                     />
                                 </div>
-                                <div className="item   scroll-animateImage1">
+                                <div className="item   ">
                                     <img src={python} alt="Python" />
                                     <ProgressBar
                                         className="progressBarPyton"
@@ -100,7 +101,7 @@ export const Skills = () => {
                                         label={`Python ${26}%`}
                                     />
                                 </div>
-                                <div className="item   scroll-animateImage1 ">
+                                <div className="item    ">
                                     <img src={reacte} alt="React" />
                                     <ProgressBar
                                         className="progressBarReact"
@@ -108,7 +109,7 @@ export const Skills = () => {
                                         label={`React ${40}%`}
                                     />
                                 </div>
-                                <div className="item   scroll-animateImage1 ">
+                                <div className="item    ">
                                     <img src={js} alt="JavaScript" />
                                     <ProgressBar
                                         className="progressBarJs"
@@ -117,11 +118,17 @@ export const Skills = () => {
                                     />
                                 </div>
                             </Carousel>
-                            <div id="competence"></div>
                         </div>
                     </div>
                 </div>
             </div>
+            <a href="#competence">
+                <div class="flex-container" id="IconeSkills">
+                    <div class="mouse-icon">
+                        <div class="wheel"></div>
+                    </div>
+                </div>
+            </a>
         </section>
     )
 }

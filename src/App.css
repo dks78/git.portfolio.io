@@ -1,27 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
+/*                                                               Defaut CSS                                               */
 
 
-@font-face {
-  font-family: Centra;
-  src: url('./assets/font/CentraNo2-Bold.ttf');
-  font-weight: 900;
-}
-@font-face {
-  font-family: Centra;
-  src: url('./assets/font/CentraNo2-Book.ttf');
-  font-weight: 900;
-}
-@font-face {
-  font-family: Centra;
-  src: url('./assets/font/CentraNo2-Medium.ttf');
-  font-weight: 900;
-}
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
 }
 body{ 
   font-family: 'Poppins', sans-serif !important;
@@ -34,6 +24,130 @@ body{
   color: #fff !important;
  
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+@media (min-width:1700px) {
+	main .container {
+		max-width: 100%;
+		padding: 0 150px;
+	}
+}
+
+
+
+p.success {
+	color: green;
+}
+
+p.danger {
+	color: red;
+}
+h1 , h2 , h3 , h4 , h5 , h6  { 
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+/*                                                   FIN DEFAULT CSS                                                         */
+
+/*                                                  STYLE DE BASE DE L'ICONE                                                                      */
+.mouse-icon {
+  border: 2px solid #120101;
+  border-radius: 0px 0px 50px 50px;
+  height: 50px;
+  width: 30px;
+  margin-left: 50px; /* Cette marge peut être ajustée ou supprimée selon le besoin */
+  display: block;
+  z-index: 10;
+  opacity: 0.4;
+  background-color: rgb(31, 121, 255);
+  margin-top: 0 !important;
+  margin-left: 450px;
+  animation: backgroundColorChange 3s infinite; 
+  
+
+}
+
+
+.mouse-icon .wheel {
+  position: relative;
+  border-radius: 10px;
+  background: #fff;
+  width: 4px;
+  height: 10px;
+  top: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: moveUpDown 1s ease-in-out infinite alternate;
+
+
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px); /* Déplace vers le bas */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes backgroundColorChange {
+  0% {
+    background-color: rgb(31, 121, 255); /* Couleur initiale */
+  }
+  25% {
+    background-color: rgb(255, 123, 123); /* Couleur intermédiaire */
+  }
+  50% {
+    background-color: rgb(123, 255, 123); /* Couleur intermédiaire */
+  }
+  75% {
+    background-color: rgb(123, 123, 255); /* Couleur intermédiaire */
+  }
+  100% {
+    background-color: rgb(31, 121, 255); /* Couleur finale (reviens à la couleur initiale) */
+  }
+}
+/*                                                              FIN DU STYLE DE BASE DE L'ICONE                                        */
+
+
+
+
+
+
+/*                                                     NAVBAR                                                                 */
 
 
  nav.navbar {
@@ -107,8 +221,6 @@ span.navbar-text {
 }
 
 
-
-/*CSS , concernant le button et le text a l'interieur */
 .navbar-text button {
   font-weight: 700;
   color: #fff;
@@ -193,15 +305,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 } 
 /*Fin du menu burger*/
 
-
-/*                                                          FIN DE LA BARD DE NAVIGATION                                      */
-
-
-
-
-/*                                                          BODDY MAIN PRINCIPALE                                             */
-
-/* Définition de l'animation du H1 de la navBard */
+.logoPage {
+  font-size: 50px; /* Ajustez la taille du texte selon vos besoins */
+  animation: colorChange 5s infinite; /* Animation de 5 secondes en boucle */
+  font-weight: 900 ;
+}
 @keyframes colorChange {
   0% {
     color: #FF0000;
@@ -220,23 +328,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-/* Application de l'animation au texte du logo */
-.logoPage {
-  font-size: 50px; /* Ajustez la taille du texte selon vos besoins */
-  animation: colorChange 5s infinite; /* Animation de 5 secondes en boucle */
-  font-weight: 900 ;
-}
+
+/*                                                          FIN DE LA BARD DE NAVIGATION                                      */
 
 
 
-h1 , h2 , h3 , h4 , h5 , h6  { 
-  margin: 0;
-  padding: 0;
-  line-height: normal;
-}
+
+/*                                                          BANNER                                             */
+
+/* Définition de l'animation du H1 de la navBard */
 
 
-/************ Banner Css ************/
+
+
+
+
+
+
+/************                                                 Banner Css                                           ************/
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
@@ -308,14 +417,17 @@ h1 , h2 , h3 , h4 , h5 , h6  {
   
 }
 h1 > .wrap { 
-  font-size: 25px;
+  font-size: 25px; 
+
 }
+/*                                                        FIN BANNER                                                       */
+
 /*                                                        SKILLLL                                                         */
 
 .skill {
   padding: 0 0 50px 0;
   position: relative;
-  margin-top: 150px;
+  margin-top: 170px;
 }
 .skill-bx {
   background: #151515;
@@ -431,65 +543,135 @@ button{
   transform: translateY(0); /* Remettre à la position d'origine */
 }
 
-
-/* Styles pour l'icône de la souris */
-.mouse-icon {
-  border: 2px solid #120101;
-  border-radius: 0px 0px 50px 50px;
-  height: 50px;
-  width: 30px;
-  margin-left: 50px; /* Cette marge peut être ajustée ou supprimée selon le besoin */
-  display: block;
-  z-index: 10;
-  opacity: 0.4;
-  background-color: rgb(31, 121, 255);
-  margin-top: 0 !important;
-  margin-left: 450px;
-  animation: backgroundColorChange 3s infinite; 
-  
-
+#IconeSkills{
+  margin-top: 70px;
+  margin-right: 20%;
 }
+/*                                                        FIN SKILLLLLS                                  */
 
-/* Styles pour la roue de l'icône de la souris */
-.mouse-icon .wheel {
+
+
+
+.project {
+  padding: 80px 0;
   position: relative;
-  border-radius: 10px;
-  background: #fff;
-  width: 4px;
-  height: 10px;
-  top: 6px;
-  margin-left: auto;
-  margin-right: auto;
-  animation: moveUpDown 1s ease-in-out infinite alternate;
-
-
+  margin-top: 300px !important;
 }
-
-@keyframes moveUpDown {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(20px); /* Déplace vers le bas */
-  }
-  100% {
-    transform: translateY(0);
-  }
+.project h2 {
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
 }
-@keyframes backgroundColorChange {
-  0% {
-    background-color: rgb(31, 121, 255); /* Couleur initiale */
-  }
-  25% {
-    background-color: rgb(255, 123, 123); /* Couleur intermédiaire */
-  }
-  50% {
-    background-color: rgb(123, 255, 123); /* Couleur intermédiaire */
-  }
-  75% {
-    background-color: rgb(123, 123, 255); /* Couleur intermédiaire */
-  }
-  100% {
-    background-color: rgb(31, 121, 255); /* Couleur finale (reviens à la couleur initiale) */
-  }
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+.project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.project .nav.nav-pills .nav-item {
+  width: 33.33333%;
+}
+.project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+.project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+.project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important;
+}
+.project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+.nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+.proj-txtx {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.proj-imgbx:hover .proj-txtx {
+  top: 50%;
+  opacity: 1;
+}
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+.background-image-right {
+  top: 20%;
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  right: 0;
+  z-index: -4;
 }

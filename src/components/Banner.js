@@ -78,6 +78,7 @@ export const Banner = () => {
                         <img id="imageHeader" src={headerImg} alt="Herader img" />
                     </Col>
                 </Row>
+                <div id="competence"></div>
             </Container>
         </section>
     )
